@@ -69,7 +69,7 @@ class _AccountPageState extends State<AccountPage> {
             ],
           ),
           const SizedBox(
-            height: 30,
+            height: 20,
           ),
           Container(
             decoration: const BoxDecoration(
@@ -139,10 +139,22 @@ class _AccountPageState extends State<AccountPage> {
               ),
             ),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text("Notification Tone",
                     style: GoogleFonts.poppins(
                         fontSize: 16, color: Colors.black54)),
+                Row(
+                  children: [
+                    Text("Joy",
+                        style: GoogleFonts.poppins(
+                            fontSize: 14, color: Colors.black54)),
+                    const SizedBox(
+                      width: 5,
+                    ),
+                    Image.asset("assets/arrw.png")
+                  ],
+                )
               ],
             ),
           ),
@@ -157,10 +169,22 @@ class _AccountPageState extends State<AccountPage> {
               ),
             ),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text("Language Options",
                     style: GoogleFonts.poppins(
                         fontSize: 16, color: Colors.black54)),
+                Row(
+                  children: [
+                    Text("English",
+                        style: GoogleFonts.poppins(
+                            fontSize: 14, color: Colors.black54)),
+                    const SizedBox(
+                      width: 5,
+                    ),
+                    Image.asset("assets/arrw.png")
+                  ],
+                )
               ],
             ),
           ),
@@ -257,13 +281,6 @@ class _AccountPageState extends State<AccountPage> {
           Container(
             margin: const EdgeInsets.only(bottom: 12),
             padding: const EdgeInsets.only(bottom: 11),
-            decoration: const BoxDecoration(
-              border: const Border(
-                bottom: const BorderSide(
-                  color: Colors.black12,
-                ),
-              ),
-            ),
             child: Row(
               children: [
                 Text("Privacy Policy",
@@ -279,6 +296,9 @@ class _AccountPageState extends State<AccountPage> {
             child: Text("Version 1.0.0",
                 style:
                     GoogleFonts.poppins(fontSize: 14, color: Colors.black54)),
+          ),
+          const SizedBox(
+            height: 20,
           ),
         ],
       ),
