@@ -23,23 +23,32 @@ class _MainPageState extends State<MainPage> {
             child: Container(
           color: 'FFFFFF'.toColor(),
         )),
+        // Padding(
+        //   padding: const EdgeInsets.only(top: 90),
+        //   child: SafeArea(
+        //       child: PageView(
+        //     controller: pageController,
+        //     onPageChanged: (index) {
+        //       setState(() {
+        //         selectedPage = index;
+        //       });
+        //     },
+        //     // ignore: prefer_const_literals_to_create_immutables
+        //     children: [
+        //       const Center(child: HomePage()),
+        //       const Center(child: ReportPage()),
+        //       const AccountPage(),
+        //     ],
+        //   )),
+        // ),
         Padding(
           padding: const EdgeInsets.only(top: 90),
           child: SafeArea(
-              child: PageView(
-            controller: pageController,
-            onPageChanged: (index) {
-              setState(() {
-                selectedPage = index;
-              });
-            },
-            // ignore: prefer_const_literals_to_create_immutables
-            children: [
-              const Center(child: HomePage()),
-              const Center(child: ReportPage()),
-              const AccountPage(),
-            ],
-          )),
+              child: selectedPage == 0
+                  ? const HomePage()
+                  : selectedPage == 1
+                      ? const ReportPage()
+                      : const AccountPage()),
         ),
         Align(
           alignment: Alignment.topCenter,

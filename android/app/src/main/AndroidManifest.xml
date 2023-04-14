@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.monitoring_kolam_ikan">
    <application
-        android:label="monitoring_kolam_ikan"
+        android:label="Lumpia"
         android:name="${applicationName}"
         android:icon="@mipmap/launcher_icon">
         <activity
